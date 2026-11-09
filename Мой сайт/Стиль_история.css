@@ -1,0 +1,316 @@
+.page-header {
+    background: linear-gradient(135deg, #0f1a2f, #1a2a4a);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 18px;
+    color: #b0c4de;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #1a2a4a;
+}
+
+.key-figures {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.figures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.figure-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.figure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(74,144,226,0.15);
+}
+
+.figure-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #4a90e2;
+}
+
+.figure-card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #1a2a4a;
+}
+
+.figure-years {
+    color: #4a90e2;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.figure-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.timeline {
+    position: absolute;
+    max-width: 1200px;
+    margin:  auto;
+    padding: 0px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(180deg, #4a90e2, #023396);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    border: 4px solid #4a90e2;
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.left::after {
+    right: -14px;
+}
+
+.timeline-item.right::after {
+    left: -14px;
+}
+
+.timeline-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    border: 3px solid #4a90e2;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.timeline-item.left .timeline-image {
+    right: -30px;
+}
+
+.timeline-item.right .timeline-image {
+    left: -30px;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.timeline-content {
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(74,144,226,0.2);
+}
+
+.timeline-year {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #1a2a4a;
+}
+
+.timeline-content p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.history-summary {
+    background: linear-gradient(135deg, #0f1a2f, #1a2a4a);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.summary-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.summary-content h2 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+.summary-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #b0c4de;
+}
+
+.summary-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.summary-stat {
+    text-align: center;
+}
+
+.summary-stat .stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4a90e2;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.summary-stat span:last-child {
+    color: #b0c4de;
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    .figures-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .figures-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item.right {
+        left: 0;
+    }
+    
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 18px;
+    }
+    
+    .timeline-image {
+        width: 40px;
+        height: 40px;
+        left: 10px !important;
+        right: auto !important;
+    }
+    
+    .summary-stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .summary-content h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .figure-card img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 18px;
+    }
+}
